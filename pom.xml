@@ -7,7 +7,7 @@
 
   <groupId>io.github.bcoughlan</groupId>
   <artifactId>base-package-enforcer-rule</artifactId>
-  <version>1.0.0</version>
+  <version>0</version>
 
   <packaging>jar</packaging>
 
