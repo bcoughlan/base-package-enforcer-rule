@@ -9,11 +9,11 @@ if ! git diff-index --quiet HEAD; then
   exit 1
 fi
 
-# git switch main
-
 mvn versions:set -DgenerateBackupPoms=false -DnewVersion="$VERSION"
 git commit -a -m "Release version $VERSION"
 git tag -a "v$VERSION" -m "v$VERSION"
+
+mvn -Prelease clean deploy
 
 mvn versions:set -DgenerateBackupPoms=false -DnewVersion=0
 git commit -a -m "Prepare for next version"
