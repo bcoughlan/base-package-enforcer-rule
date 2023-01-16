@@ -74,7 +74,6 @@ public class BasePackageEnforcerRule implements EnforcerRule {
   private String evaluatePattern(MavenProject project) {
     //Performance optimisation: No need for Groovy interpreter if default pattern 
     if (pattern == null) {
-      //"project.groupId + '.' + project.artifactId.replace('-', '').toLowerCase()"
       return project.getGroupId() + "." + project.getArtifactId().replace("-", "").toLowerCase();
     }
     Binding binding = new Binding();
