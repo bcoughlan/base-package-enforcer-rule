@@ -1,8 +1,8 @@
 # base-package-enforcer-rule
 
-A Maven enforcer rule to ensure verify that &lt;groupId>.&lt;artifactId> matches the base package.
+A Maven enforcer rule to verify that the &lt;groupId>.&lt;artifactId> of the module matches the base package in `src/main/java`.
 
-The use case is to allow writing ArchUnit tests which enforce Maven multi-module project constraints.
+This allows you to write ArchUnit tests which enforce Maven multi-module project constraints.
 
 # Usage
 
